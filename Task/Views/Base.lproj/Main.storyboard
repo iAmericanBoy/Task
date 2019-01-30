@@ -65,7 +65,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tOx-cV-RqR">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add new Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tOx-cV-RqR">
                                                     <rect key="frame" x="16" y="11" width="343" height="22"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -142,9 +142,22 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Canc" id="0qT-KX-d15">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="3vb-I7-gSK"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Dlu-Un-IQB"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="3vb-I7-gSK">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="Hzb-pF-Kaa" id="Pa8-58-v0d"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Dlu-Un-IQB">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="Hzb-pF-Kaa" id="Eim-9I-9hI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dueDateTextField" destination="ShW-oL-eVi" id="dML-Ix-cuj"/>
+                        <outlet property="nameTextField" destination="tOx-cV-RqR" id="seJ-q9-rWI"/>
+                        <outlet property="notesTextView" destination="omg-tV-mC4" id="eiG-Ux-pwT"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fzr-my-1cZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
