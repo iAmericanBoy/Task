@@ -18,6 +18,7 @@
 		B634815122020F92006D8BD3 /* Task+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B634815022020F92006D8BD3 /* Task+Convenience.swift */; };
 		B634815C22024016006D8BD3 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B634815B22024016006D8BD3 /* TaskController.swift */; };
 		B634815E220256FA006D8BD3 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B634815D220256FA006D8BD3 /* DateHelper.swift */; };
+		B634816022026936006D8BD3 /* ButtonTableViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B634815F22026935006D8BD3 /* ButtonTableViewTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B634815022020F92006D8BD3 /* Task+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Convenience.swift"; sourceTree = "<group>"; };
 		B634815B22024016006D8BD3 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		B634815D220256FA006D8BD3 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		B634815F22026935006D8BD3 /* ButtonTableViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			children = (
 				B634814722020CD8006D8BD3 /* TaskListTableViewController.swift */,
 				B634814922020D97006D8BD3 /* TaskDetailTableViewController.swift */,
+				B634815F22026935006D8BD3 /* ButtonTableViewTableViewCell.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				B634814A22020D97006D8BD3 /* TaskDetailTableViewController.swift in Sources */,
 				B634814F22020EDE006D8BD3 /* Task.xcdatamodeld in Sources */,
 				B634814C22020DE9006D8BD3 /* CoreDataStack.swift in Sources */,
+				B634816022026936006D8BD3 /* ButtonTableViewTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

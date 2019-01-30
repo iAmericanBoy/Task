@@ -18,14 +18,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" id="zvu-4X-w1H">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="50" id="zvu-4X-w1H" customClass="ButtonTableViewTableViewCell" customModule="Task" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zvu-4X-w1H" id="icQ-jk-tQb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="mRu-Kr-rLd">
+                                            <rect key="frame" x="16" y="11" width="343" height="28"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRY-F6-69u">
+                                                    <rect key="frame" x="0.0" y="0.0" width="315" height="28"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xL1-rG-VoK">
+                                                    <rect key="frame" x="315" y="0.0" width="28" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="xL1-rG-VoK" secondAttribute="height" multiplier="1:1" id="8rg-py-ZiJ"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="incomplete"/>
+                                                    <connections>
+                                                        <action selector="completeButtonTapped:" destination="zvu-4X-w1H" eventType="touchUpInside" id="gA2-EO-OKy"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="mRu-Kr-rLd" firstAttribute="leading" secondItem="icQ-jk-tQb" secondAttribute="leadingMargin" id="0OQ-Sk-uQT"/>
+                                        <constraint firstItem="mRu-Kr-rLd" firstAttribute="top" secondItem="icQ-jk-tQb" secondAttribute="topMargin" id="EH0-Wb-I6o"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="mRu-Kr-rLd" secondAttribute="trailing" id="Hnk-eW-gcJ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="mRu-Kr-rLd" secondAttribute="bottom" id="Qkj-EW-FzT"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="completeButton" destination="xL1-rG-VoK" id="9U0-XD-HS2"/>
+                                    <outlet property="primaryLabel" destination="CRY-F6-69u" id="xSN-0j-qjj"/>
                                     <segue destination="Hzb-pF-Kaa" kind="show" identifier="toDetailTVC" id="Pek-Ry-tDc"/>
                                 </connections>
                             </tableViewCell>
@@ -45,7 +76,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0k-f3-SBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="466" y="113"/>
+            <point key="canvasLocation" x="464.80000000000001" y="112.89355322338831"/>
         </scene>
         <!--(Name)-->
         <scene sceneID="pw0-js-33F">
@@ -210,6 +241,9 @@
             <point key="canvasLocation" x="-486" y="113"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="incomplete" width="512" height="512"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Pek-Ry-tDc"/>
     </inferredMetricsTieBreakers>
