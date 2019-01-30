@@ -11,6 +11,8 @@
 		B634813522020AE8006D8BD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B634813322020AE8006D8BD3 /* Main.storyboard */; };
 		B634813722020AEE006D8BD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B634813622020AEE006D8BD3 /* Assets.xcassets */; };
 		B634813A22020AEE006D8BD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B634813822020AEE006D8BD3 /* LaunchScreen.storyboard */; };
+		B634814822020CD8006D8BD3 /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B634814722020CD8006D8BD3 /* TaskListTableViewController.swift */; };
+		B634814A22020D97006D8BD3 /* TaskDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B634814922020D97006D8BD3 /* TaskDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		B634813622020AEE006D8BD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B634813922020AEE006D8BD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B634813B22020AEE006D8BD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B634814722020CD8006D8BD3 /* TaskListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTableViewController.swift; sourceTree = "<group>"; };
+		B634814922020D97006D8BD3 /* TaskDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 		B634814622020C05006D8BD3 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B634814722020CD8006D8BD3 /* TaskListTableViewController.swift */,
+				B634814922020D97006D8BD3 /* TaskDetailTableViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -180,7 +186,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B634814822020CD8006D8BD3 /* TaskListTableViewController.swift in Sources */,
 				B634813022020AE8006D8BD3 /* AppDelegate.swift in Sources */,
+				B634814A22020D97006D8BD3 /* TaskDetailTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
