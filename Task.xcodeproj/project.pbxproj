@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B634813022020AE8006D8BD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B634812F22020AE8006D8BD3 /* AppDelegate.swift */; };
-		B634813222020AE8006D8BD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B634813122020AE8006D8BD3 /* ViewController.swift */; };
 		B634813522020AE8006D8BD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B634813322020AE8006D8BD3 /* Main.storyboard */; };
 		B634813722020AEE006D8BD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B634813622020AEE006D8BD3 /* Assets.xcassets */; };
 		B634813A22020AEE006D8BD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B634813822020AEE006D8BD3 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		B634812C22020AE8006D8BD3 /* Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B634812F22020AE8006D8BD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B634813122020AE8006D8BD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B634813422020AE8006D8BD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B634813622020AEE006D8BD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B634813922020AEE006D8BD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,13 +53,60 @@
 			isa = PBXGroup;
 			children = (
 				B634812F22020AE8006D8BD3 /* AppDelegate.swift */,
-				B634813122020AE8006D8BD3 /* ViewController.swift */,
-				B634813322020AE8006D8BD3 /* Main.storyboard */,
+				B634814322020BDA006D8BD3 /* Model */,
+				B634814222020BC0006D8BD3 /* Views */,
+				B634814422020BE7006D8BD3 /* Controller */,
+				B634814122020BAB006D8BD3 /* Resources */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		B634814122020BAB006D8BD3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				B634813622020AEE006D8BD3 /* Assets.xcassets */,
 				B634813822020AEE006D8BD3 /* LaunchScreen.storyboard */,
 				B634813B22020AEE006D8BD3 /* Info.plist */,
 			);
-			path = Task;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B634814222020BC0006D8BD3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B634813322020AE8006D8BD3 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B634814322020BDA006D8BD3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B634814422020BE7006D8BD3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B634814622020C05006D8BD3 /* View Controller */,
+				B634814522020BF4006D8BD3 /* Model Controller */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B634814522020BF4006D8BD3 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		B634814622020C05006D8BD3 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +180,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B634813222020AE8006D8BD3 /* ViewController.swift in Sources */,
 				B634813022020AE8006D8BD3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J6B8ZX28ZW;
-				INFOPLIST_FILE = Task/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Task/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J6B8ZX28ZW;
-				INFOPLIST_FILE = Task/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Task/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
