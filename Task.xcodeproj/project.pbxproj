@@ -104,8 +104,8 @@
 		B634814422020BE7006D8BD3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B634814622020C05006D8BD3 /* View Controller */,
 				B634814522020BF4006D8BD3 /* Model Controller */,
+				B634814622020C05006D8BD3 /* View Controller */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

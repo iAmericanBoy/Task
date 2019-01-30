@@ -60,7 +60,7 @@ class TaskController {
     
     //MARK: -MOCKDATA
     
-    let mockData: [Task] = {
+    private let mockData: [Task] = {
         let firstTask = Task(name: "finish Project", notes: "This is a test", due: nil)
         let secondTask = Task(name: "drink Water", notes: "This is a test2", due: nil)
         let thirdTask = Task(name: "make DaysInARow pretty", notes: "This is a test3", due: Date())
