@@ -18,13 +18,22 @@ class TaskDetailTableViewController: UITableViewController {
     @IBOutlet var toolBar: UIToolbar!
     
     //MARK: - Properties
-    var task: Task?
+    var task: Task? {
+        didSet {
+            loadViewIfNeeded()
+            updateViews()
+        }
+    }
     var dueDateValue: Date?
 
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateViews()
+        title = "new Task"
+        dueDateTextField.inputView = dueDatePicker
+        dueDateTextField.inputAccessoryView = toolBar
+        tableView.delaysContentTouches = false
+        
     }
     //MARK: - Actions
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
@@ -54,14 +63,14 @@ class TaskDetailTableViewController: UITableViewController {
     
     @IBAction func userTappedView(_ sender: UITapGestureRecognizer) {
         dueDateTextField.resignFirstResponder()
+        nameTextField.resignFirstResponder()
+        notesTextView.resignFirstResponder()
     }
     
     //MARK: - Private Functions
     func updateViews() {
-        dueDateTextField.inputView = dueDatePicker
-        dueDateTextField.inputAccessoryView = toolBar
-        
         guard let task = task  else {return}
+        title = "Task"
         nameTextField.text = task.name
         dueDateTextField.text = task.due?.stringValue()
         notesTextView.text = task.notes

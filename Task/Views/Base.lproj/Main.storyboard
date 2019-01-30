@@ -139,6 +139,7 @@
                         <connections>
                             <outlet property="dataSource" destination="Hzb-pF-Kaa" id="NiP-kL-sux"/>
                             <outlet property="delegate" destination="Hzb-pF-Kaa" id="ePV-ZW-4wO"/>
+                            <outletCollection property="gestureRecognizers" destination="Hh5-WM-xnJ" appends="YES" id="Dqf-Q5-fqc"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="(Name)" id="0qT-KX-d15">
