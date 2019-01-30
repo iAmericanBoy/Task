@@ -17,6 +17,7 @@
 		B634814F22020EDE006D8BD3 /* Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B634814D22020EDE006D8BD3 /* Task.xcdatamodeld */; };
 		B634815122020F92006D8BD3 /* Task+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B634815022020F92006D8BD3 /* Task+Convenience.swift */; };
 		B634815C22024016006D8BD3 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B634815B22024016006D8BD3 /* TaskController.swift */; };
+		B634815E220256FA006D8BD3 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B634815D220256FA006D8BD3 /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B634814E22020EDE006D8BD3 /* Task.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Task.xcdatamodel; sourceTree = "<group>"; };
 		B634815022020F92006D8BD3 /* Task+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Convenience.swift"; sourceTree = "<group>"; };
 		B634815B22024016006D8BD3 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
+		B634815D220256FA006D8BD3 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				B634813622020AEE006D8BD3 /* Assets.xcassets */,
 				B634813822020AEE006D8BD3 /* LaunchScreen.storyboard */,
 				B634813B22020AEE006D8BD3 /* Info.plist */,
+				B634815D220256FA006D8BD3 /* DateHelper.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B634815C22024016006D8BD3 /* TaskController.swift in Sources */,
+				B634815E220256FA006D8BD3 /* DateHelper.swift in Sources */,
 				B634814822020CD8006D8BD3 /* TaskListTableViewController.swift in Sources */,
 				B634813022020AE8006D8BD3 /* AppDelegate.swift in Sources */,
 				B634815122020F92006D8BD3 /* Task+Convenience.swift in Sources */,
