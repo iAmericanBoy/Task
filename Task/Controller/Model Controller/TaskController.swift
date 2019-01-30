@@ -23,6 +23,12 @@ class TaskController {
         return []
     }()
     
+    init() {
+        if tasks.count == 0  {
+            tasks = mockData
+        }
+    }
+    
     //CRUD
     func addTaskWith(name: String, notes: String?, due: Date?) {
         Task(name: name, notes: notes, due: due)
@@ -51,4 +57,14 @@ class TaskController {
             print("Error saving: \(String(describing: error)) \(error.localizedDescription))")
         }
     }
+    
+    //MARK: -MOCKDATA
+    
+    let mockData: [Task] = {
+        let firstTask = Task(name: "finish Project", notes: "This is a test", due: nil)
+        let secondTask = Task(name: "drink Water", notes: "This is a test2", due: nil)
+        let thirdTask = Task(name: "make DaysInARow pretty", notes: "This is a test3", due: Date())
+        secondTask.isComplete = true
+        return [firstTask,secondTask,thirdTask]
+    }()
 }
