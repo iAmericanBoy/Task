@@ -21,6 +21,14 @@ class TaskController {
         return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.context, sectionNameKeyPath: "isComplete", cacheName: nil)
     }()
     
+    init() {
+        do{
+            try fetchResultsController.performFetch()
+        } catch {
+            print("Error loading fetchResultsController. \(String(describing: error)), \(error.localizedDescription)")
+        }
+    }
+    
     //CRUD
     func addTaskWith(name: String, notes: String?, due: Date?) {
         Task(name: name, notes: notes, due: due)
