@@ -8,10 +8,10 @@
 
 import UIKit
 protocol ButtonTableViewCellDelegate: class {
-    func buttonCellButtonTapped(_ sender: ButtonTableViewTableViewCell)
+    func buttonCellButtonTapped(_ sender: ButtonTableViewCell)
 }
 
-class ButtonTableViewTableViewCell: UITableViewCell {
+class ButtonTableViewCell: UITableViewCell {
     //MARK: - Outlets
     @IBOutlet weak var primaryLabel: UILabel!
     @IBOutlet weak var completeButton: UIButton!
