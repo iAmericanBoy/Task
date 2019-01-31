@@ -13,7 +13,7 @@ class TaskController {
     //MARK: - Singleton
     static let shared = TaskController()
     
-    var tasks: [Task] =  {
+    var tasks: [Task] {
         let request: NSFetchRequest<Task> = Task.fetchRequest()
         do {
             return try CoreDataStack.context.fetch(request)
@@ -21,12 +21,6 @@ class TaskController {
             print("Error loading: \(String(describing: error)) \(error.localizedDescription))")
         }
         return []
-    }()
-    
-    init() {
-        if tasks.count == 0  {
-            tasks = mockData
-        }
     }
     
     //CRUD
@@ -50,6 +44,7 @@ class TaskController {
         if let moc = task.managedObjectContext {
             moc.delete(task)
             saveToPersistentStore()
+            
         }
     }
     
