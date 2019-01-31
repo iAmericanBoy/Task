@@ -11,7 +11,6 @@
 		B634813522020AE8006D8BD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B634813322020AE8006D8BD3 /* Main.storyboard */; };
 		B634813722020AEE006D8BD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B634813622020AEE006D8BD3 /* Assets.xcassets */; };
 		B634813A22020AEE006D8BD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B634813822020AEE006D8BD3 /* LaunchScreen.storyboard */; };
-		B634814822020CD8006D8BD3 /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B634814722020CD8006D8BD3 /* TaskListTableViewController.swift */; };
 		B634814A22020D97006D8BD3 /* TaskDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B634814922020D97006D8BD3 /* TaskDetailTableViewController.swift */; };
 		B634814C22020DE9006D8BD3 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B634814B22020DE9006D8BD3 /* CoreDataStack.swift */; };
 		B634814F22020EDE006D8BD3 /* Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B634814D22020EDE006D8BD3 /* Task.xcdatamodeld */; };
@@ -28,7 +27,6 @@
 		B634813622020AEE006D8BD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B634813922020AEE006D8BD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B634813B22020AEE006D8BD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B634814722020CD8006D8BD3 /* TaskListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTableViewController.swift; sourceTree = "<group>"; };
 		B634814922020D97006D8BD3 /* TaskDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailTableViewController.swift; sourceTree = "<group>"; };
 		B634814B22020DE9006D8BD3 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		B634814E22020EDE006D8BD3 /* Task.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Task.xcdatamodel; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 		B634814622020C05006D8BD3 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B634814722020CD8006D8BD3 /* TaskListTableViewController.swift */,
 				B634815F22026935006D8BD3 /* ButtonTableViewTableViewCell.swift */,
 				B634814922020D97006D8BD3 /* TaskDetailTableViewController.swift */,
 			);
@@ -206,7 +203,6 @@
 			files = (
 				B634815C22024016006D8BD3 /* TaskController.swift in Sources */,
 				B634815E220256FA006D8BD3 /* DateHelper.swift in Sources */,
-				B634814822020CD8006D8BD3 /* TaskListTableViewController.swift in Sources */,
 				B634813022020AE8006D8BD3 /* AppDelegate.swift in Sources */,
 				B634815122020F92006D8BD3 /* Task+Convenience.swift in Sources */,
 				B634814A22020D97006D8BD3 /* TaskDetailTableViewController.swift in Sources */,

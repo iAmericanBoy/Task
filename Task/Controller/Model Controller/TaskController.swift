@@ -13,15 +13,13 @@ class TaskController {
     //MARK: - Singleton
     static let shared = TaskController()
     
-    var tasks: [Task] {
-        let request: NSFetchRequest<Task> = Task.fetchRequest()
-        do {
-            return try CoreDataStack.context.fetch(request)
-        } catch {
-            print("Error loading: \(String(describing: error)) \(error.localizedDescription))")
-        }
-        return []
-    }
+    let fetchResultsController: NSFetchedResultsController<Task> = {
+        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+        let isCompleteSort = NSSortDescriptor(key: "isComplete", ascending: false)
+        let dueSort = NSSortDescriptor(key: "due", ascending: false)
+        fetchRequest.sortDescriptors = [isCompleteSort,dueSort]
+        return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.context, sectionNameKeyPath: "isComplete", cacheName: nil)
+    }()
     
     //CRUD
     func addTaskWith(name: String, notes: String?, due: Date?) {
@@ -44,7 +42,6 @@ class TaskController {
         if let moc = task.managedObjectContext {
             moc.delete(task)
             saveToPersistentStore()
-            
         }
     }
     
@@ -56,14 +53,4 @@ class TaskController {
             print("Error saving: \(String(describing: error)) \(error.localizedDescription))")
         }
     }
-    
-    //MARK: -MOCKDATA
-    
-    private let mockData: [Task] = {
-        let firstTask = Task(name: "finish Project", notes: "This is a test", due: nil)
-        let secondTask = Task(name: "drink Water", notes: "This is a test2", due: nil)
-        let thirdTask = Task(name: "make DaysInARow pretty", notes: "This is a test3", due: Date())
-        secondTask.isComplete = true
-        return [firstTask,secondTask,thirdTask]
-    }()
 }
