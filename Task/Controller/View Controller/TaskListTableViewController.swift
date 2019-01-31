@@ -9,7 +9,6 @@
 import UIKit
 
 class TaskListTableViewController: UITableViewController {
-    //MARK: - Properties
     
     //MARK: - LifeCycle
     override func viewWillAppear(_ animated: Bool) {
@@ -24,9 +23,10 @@ class TaskListTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as? ButtonTableViewTableViewCell else {return UITableViewCell()}
         
-        cell.textLabel?.text = TaskController.shared.tasks[indexPath.row].name
+        cell.update(withTask: TaskController.shared.tasks[indexPath.row])
+        cell.delegate = self
         return cell
     }
     
@@ -49,5 +49,16 @@ class TaskListTableViewController: UITableViewController {
                 destinationVC.task = TaskController.shared.tasks[index.row]
             }
         }
+    }
+}
+extension TaskListTableViewController: ButtonTableViewCellDelegate {
+    func buttonCellButtonTapped(_ sender: ButtonTableViewTableViewCell) {
+        tableView.beginUpdates()
+        if let index = tableView.indexPath(for: sender) {
+            let task = TaskController.shared.tasks[index.row]
+            TaskController.shared.toggleIsCompleteFor(task: task)
+            tableView.reloadRows(at: [index], with: .automatic)
+        }
+        tableView.endUpdates()
     }
 }

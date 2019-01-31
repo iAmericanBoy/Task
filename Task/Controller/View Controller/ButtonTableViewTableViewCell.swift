@@ -7,25 +7,27 @@
 //
 
 import UIKit
+protocol ButtonTableViewCellDelegate: class {
+    func buttonCellButtonTapped(_ sender: ButtonTableViewTableViewCell)
+}
 
 class ButtonTableViewTableViewCell: UITableViewCell {
     //MARK: - Outlets
     @IBOutlet weak var primaryLabel: UILabel!
     @IBOutlet weak var completeButton: UIButton!
     
-    //MARK: - LifeCycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    //MARK: - Properties
+    weak var delegate: ButtonTableViewCellDelegate?
     
     //MARK: - Actions
     @IBAction func completeButtonTapped(_ sender: UIButton) {
+        delegate?.buttonCellButtonTapped(self)
     }
     
     //MARK: - Private Functions
     func update(withTask task: Task) {
         primaryLabel.text = task.name
+        updateButton(task.isComplete)
     }
     
     func updateButton(_ isComplete: Bool) {

@@ -127,8 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				B634814722020CD8006D8BD3 /* TaskListTableViewController.swift */,
-				B634814922020D97006D8BD3 /* TaskDetailTableViewController.swift */,
 				B634815F22026935006D8BD3 /* ButtonTableViewTableViewCell.swift */,
+				B634814922020D97006D8BD3 /* TaskDetailTableViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";

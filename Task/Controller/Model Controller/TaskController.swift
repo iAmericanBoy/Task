@@ -42,6 +42,10 @@ class TaskController {
         saveToPersistentStore()
     }
     
+    func toggleIsCompleteFor(task: Task) {
+        task.isComplete = !task.isComplete
+    }
+    
     func remove(task: Task) {
         if let moc = task.managedObjectContext {
             moc.delete(task)
